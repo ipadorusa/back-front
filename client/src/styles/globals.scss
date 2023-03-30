@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+/* reset & common class */
+
+html {
+  color: #000;
+}
+
+html,
+body {
+  width: 100%;
+  -webkit-text-size-adjust: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hidden,
+.blind {
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+}

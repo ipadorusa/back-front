@@ -1,0 +1,16 @@
+{
+  "name": "next13-react-query-study",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/ipadorusa/back-front.git",
+  "author": "ipadorusa <ipadorusa@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "client": "yarn workspace client run dev"
+  }
+}
