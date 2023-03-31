@@ -1,20 +1,10 @@
 import { useState } from 'react'
 import { useTodos } from '@/src/hooks'
 
-function TodoList() {
-  const [postCount, setPostCount] = useState(10)
-  const { data, isLoading, isError } = useTodos(postCount)
-
-  if (isLoading) {
-    return <div>Loading...</div>
-  }
-
-  if (isError) {
-    return <div>Error fetching todos</div>
-  }
+function LunchMenu() {
   return (
     <>
-      <h3>TodoList</h3>
+      <h3>LunchMenu</h3>
       <ul>
         {data.map((item) => (
           <li key={item.id}>{item.title}</li>
@@ -35,7 +25,7 @@ function TodoForm() {
 export default function Page() {
   return (
     <>
-      <TodoList />
+      <LunchMenu />
       <TodoForm />
     </>
   )

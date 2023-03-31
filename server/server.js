@@ -1,6 +1,6 @@
 const jsonServer = require("json-server");
 const server = jsonServer.create();
-const router = jsonServer.router("todo.json");
+const router = jsonServer.router("./src/todo.json");
 const middlewares = jsonServer.defaults();
 
 server.use(middlewares);
