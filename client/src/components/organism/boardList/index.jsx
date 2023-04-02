@@ -1,4 +1,4 @@
-import React, { Suspense, useState } from 'react'
+import React, { Suspense, useEffect, useState } from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { fetchPageNation } from '@/src/hooks/usePages'
 import Button from '../../atom/Button'
@@ -14,6 +14,7 @@ export default function BoardList() {
   })
   const handleEvt = (e) => {
     setPage(e.target.dataset.idx)
+    console.log('e.target.dataset.idx:', e.target.dataset.idx, 'page:', page)
   }
   if (isLoading) return <p>Loading users...</p>
   return (
@@ -27,7 +28,15 @@ export default function BoardList() {
         ))}
       </div>
       {Array.from({ length: 10 }, (_, i) => i + 1).map((arr, idx) => (
-        <Button event={handleEvt} label={arr} key={idx} btnClass={'page__btn'} />
+        <Button
+          type={'button'}
+          key={idx}
+          dataIdx={arr}
+          className={page === arr ? 'page__btn active' : 'page__btn'}
+          onClick={handleEvt}
+        >
+          {arr}
+        </Button>
       ))}
     </section>
   )
