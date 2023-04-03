@@ -1,19 +1,13 @@
-import classNames from 'classnames'
+import classNames from 'classnames/bind'
 import style from './button.module.scss'
-console.log('a', style)
-let cx = classNames.bind(style)
+const cx = classNames.bind(style)
 
 const Button = (props) => {
-  const { type, onClick, children, theme, size, className, disabled, dataIdx } = props
+  const { type, onClick, children, className, disabled } = props
   const classProps = cx(className)
+  console.log('disabled', disabled)
   return (
-    <button
-      type={type}
-      onClick={onClick}
-      disabled={disabled}
-      className={classProps}
-      data-idx={dataIdx}
-    >
+    <button type={type} onClick={onClick} disabled={disabled} className={classProps}>
       {children}
     </button>
   )

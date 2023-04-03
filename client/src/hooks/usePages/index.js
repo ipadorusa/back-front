@@ -10,7 +10,10 @@ const fetchPageNation = async (page = 1) => {
 const usePageNation = (page) => {
   return useQuery({
     queryKey: ['pageNation', page],
-    queryFn: () => fetchPageNation(page)
+    queryFn: () => fetchPageNation(page),
+    keepPreviousData: true,
+    staleTime: 60 * 1000,
+    cacheTime: 60 * 1000
   })
 }
 

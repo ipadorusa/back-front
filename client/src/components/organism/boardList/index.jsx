@@ -1,21 +1,16 @@
-import React, { Suspense, useEffect, useState } from 'react'
-import { useQuery } from '@tanstack/react-query'
-import { fetchPageNation } from '@/src/hooks/usePages'
-import Button from '../../atom/Button'
+import React, { useState } from 'react'
+import { usePageNation } from '@/src/hooks/usePages'
+import Button from '@/src/components/atom/Button'
 
 export default function BoardList() {
   const [page, setPage] = useState(1)
-  const { isLoading, isError, error, data, isFetching, isPreviousData } = useQuery({
-    queryKey: ['boardList', page],
-    queryFn: () => fetchPageNation(page),
-    keepPreviousData: true,
-    staleTime: 60 * 1000,
-    cacheTime: 60 * 1000
-  })
-  const handleEvt = (e) => {
-    setPage(e.target.dataset.idx)
-    console.log('e.target.dataset.idx:', e.target.dataset.idx, 'page:', page)
+  const { isLoading, data } = usePageNation(page)
+  const handleEvt = (evtName, arr) => {
+    if (evtName === 'prevBtn') setPage((old) => Math.max(old - 1, 0))
+    if (evtName === 'pageNumber') setPage(arr)
+    if (evtName === 'nextBtn') setPage((old) => old + 1)
   }
+
   if (isLoading) return <p>Loading users...</p>
   return (
     <section>
@@ -27,17 +22,23 @@ export default function BoardList() {
           </div>
         ))}
       </div>
+      <Button type="button" onClick={() => handleEvt('prevBtn')} disabled={page === 1}>
+        PREV
+      </Button>
+
       {Array.from({ length: 10 }, (_, i) => i + 1).map((arr, idx) => (
         <Button
           type={'button'}
           key={idx}
-          dataIdx={arr}
-          className={page === arr ? 'page__btn active' : 'page__btn'}
-          onClick={handleEvt}
+          className={page === arr ? ['page__btn', 'active'] : 'page__btn'}
+          onClick={() => handleEvt('pageNumber', arr)}
         >
           {arr}
         </Button>
       ))}
+      <Button type="button" onClick={() => handleEvt('nextBtn')} disabled={page === 10}>
+        NEXT
+      </Button>
     </section>
   )
 }
