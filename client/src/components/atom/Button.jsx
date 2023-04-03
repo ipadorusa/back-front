@@ -5,7 +5,6 @@ const cx = classNames.bind(style)
 const Button = (props) => {
   const { type, onClick, children, className, disabled } = props
   const classProps = cx(className)
-  console.log('disabled', disabled)
   return (
     <button type={type} onClick={onClick} disabled={disabled} className={classProps}>
       {children}

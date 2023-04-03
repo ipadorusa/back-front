@@ -1,0 +1,12 @@
+.board__img__list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  justify-items: center;
+  .board__item {
+    justify-items: center;
+    .board__item__name {
+      display: block;
+    }
+  }
+}
