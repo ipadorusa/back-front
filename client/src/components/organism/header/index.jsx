@@ -9,7 +9,7 @@ export default function Header() {
       <Link href="/about">Link - about</Link>
       <Link href="/time">Link - time</Link>
       <Link href="/blog">Link - blog</Link>
-      <Link href="/lunch">Link - lunch</Link>
+      <Link href="/infi">Link - infi</Link>
     </header>
   )
 }
