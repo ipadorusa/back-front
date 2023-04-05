@@ -9,6 +9,10 @@ export default function BlogList() {
   return (
     <section>
       <h3>list</h3>
+      <div>
+        <input type="text" />
+        <input type="text" />
+      </div>
       <ul>
         {data?.map((post, index) => (
           <li key={post.id}>
@@ -19,6 +23,7 @@ export default function BlogList() {
           </li>
         ))}
       </ul>
+
       {postCount <= 90 && (
         <button onClick={() => setPostCount(postCount + 10)} disabled={isFetching}>
           {isFetching ? 'Loading...' : 'Show More'}

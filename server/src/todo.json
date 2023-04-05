@@ -1202,5 +1202,42 @@
       "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/241.jpg",
       "userId": "100"
     }
+  ],
+  "list": [
+    {
+      "name": "Jean Walker",
+      "alterEgo": "1",
+      "id": 1
+    },
+    {
+      "name": "asfdasdf",
+      "alterEgo": "325325235325",
+      "id": 2
+    },
+    {
+      "name": "ggasd",
+      "alterEgo": "324234325235",
+      "id": 3
+    },
+    {
+      "name": "235",
+      "alterEgo": "123",
+      "id": 4
+    },
+    {
+      "name": "555",
+      "alterEgo": "555",
+      "id": 5
+    },
+    {
+      "name": "666",
+      "alterEgo": "777",
+      "id": 6
+    },
+    {
+      "name": "kimwoosuk",
+      "alterEgo": "101034234324324",
+      "id": 7
+    }
   ]
 }

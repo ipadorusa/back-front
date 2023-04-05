@@ -1,5 +1,9 @@
 const InfinityCard = () => {
-  return <div>InfinityCard</div>
+  return (
+    <div>
+      <p>Leigh Luettgen</p>
+    </div>
+  )
 }
 
 export default InfinityCard

@@ -5,6 +5,7 @@ export default function Header() {
   return (
     <header id="sri_header" className={style.header}>
       <Link href="/">Link - HOME</Link>
+      <Link href="/grid">Link - grid</Link>
       <Link href="/board">Link - board</Link>
       <Link href="/about">Link - about</Link>
       <Link href="/time">Link - time</Link>
