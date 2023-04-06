@@ -24,6 +24,7 @@
     "react-big-calendar": "^1.6.9",
     "react-dom": "^18.2.0",
     "sass": "^1.59.3",
+    "zukeeper": "^1.0.2",
     "zustand": "^4.3.6"
   },
   "devDependencies": {

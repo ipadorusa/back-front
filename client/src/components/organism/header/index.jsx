@@ -11,6 +11,7 @@ export default function Header() {
       <Link href="/time">Link - time</Link>
       <Link href="/blog">Link - blog</Link>
       <Link href="/infi">Link - infi</Link>
+      <Link href="/counter">Link - counter</Link>
     </header>
   )
 }

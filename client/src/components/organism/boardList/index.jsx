@@ -5,7 +5,7 @@ import BoardImgList from './boardImageList'
 
 export default function BoardList() {
   const [page, setPage] = useState(1)
-  const { isLoading, data } = usePageNation(page)
+  const { isLoading, data, isPreviousData, isFetching } = usePageNation(page)
   const handleEvt = (evtName, arr) => {
     if (evtName === 'prevBtn') setPage((old) => Math.max(old - 1, 0))
     if (evtName === 'pageNumber') setPage(arr)
@@ -14,8 +14,12 @@ export default function BoardList() {
 
   return (
     <section>
-      <h3>boardlist</h3>
-      <BoardImgList data={data} isLoading={isLoading} />
+      <h3>
+        boardlist {JSON.stringify(isLoading)}, {JSON.stringify(isFetching)},{' '}
+        {JSON.stringify(isPreviousData)},
+      </h3>
+
+      <BoardImgList data={data} isLoading={isLoading} isFetching={isFetching} />
       <Button
         type="button"
         className={['page__btn', 'page__btn__prev']}

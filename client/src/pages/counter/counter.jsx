@@ -7,7 +7,7 @@ export default function Counter() {
       increment: state.increment,
       decrement: state.decrement,
       count: state.count,
-      resetCounterStore: state.resetCounterStore,
+      resetCounterStore: state.resetCounterStore
     }),
     shallow
   )
