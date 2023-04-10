@@ -13,7 +13,7 @@ const BoardImgList = ({ data, isLoading, isFetching }) => {
           })
         : data?.map((item) => (
             <div className={cx('board__item')} key={item.userId}>
-              <img src={item.avatar} alt="" />
+              <img src={item.avatar} alt="ASDF" />
               <span className={cx('board__item__name')}>{item.name}</span>
             </div>
           ))}
