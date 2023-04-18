@@ -1,7 +1,8 @@
 import { useState } from 'react'
 export default function AboutList({ props }) {
   const [postCount, setPostCount] = useState(10)
-  const { data } = props
+  const { data } = props;
+
   return (
     <section>
       <h3>list</h3>
@@ -10,6 +11,7 @@ export default function AboutList({ props }) {
           <li key={item.id}>{item.title}</li>
         ))}
       </ul>
+      <button type='button'>MORE</button>
     </section>
   )
 }
