@@ -11,13 +11,9 @@ export default function BoardList() {
     if (evtName === 'pageNumber') setPage(arr)
     if (evtName === 'nextBtn') setPage((old) => old + 1)
   }
-
+  console.log(data)
   return (
     <section>
-      <h3>
-        boardlist {JSON.stringify(isLoading)}, {JSON.stringify(isFetching)},{' '}
-        {JSON.stringify(isPreviousData)},
-      </h3>
 
       <BoardImgList data={data} isLoading={isLoading} isFetching={isFetching} />
       <Button

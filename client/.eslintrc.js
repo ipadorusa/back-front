@@ -3,11 +3,11 @@ module.exports = {
 		browser: true,
 		es2021: true,
 	},
-	extends: ['next/core-web-vitals', 'plugin:react/recommended', '@tanstack/query', 'plugin:react/jsx-runtime', 'xo'],
+	extends: ["eslint:recommended", "plugin:react/recommended", "next/core-web-vitals", "airbnb", "plugin:prettier/recommended", "plugin:import/errors"],
 	overrides: [],
 	parserOptions: {
-		ecmaVersion: 'latest',
-		sourceType: 'module',
+		ecmaVersion: "latest",
+		sourceType: "module",
 	},
 	plugins: ['react'],
 	rules: {

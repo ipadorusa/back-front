@@ -1,2 +1,5 @@
-const Storyparallel = () => <div>storyparallel</div>;
+function Storyparallel() {
+	return <div>storyparallel</div>;
+}
+
 export default Storyparallel;
