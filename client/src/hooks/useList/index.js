@@ -34,7 +34,7 @@ const useAddList = () => {
 }
 const useDeleteList = (id) => {
   const queryClient = useQueryClient()
-  return useMutation((id) => delList(id), {
+  return useMutation((idNum = id) => delList(idNum), {
     onSuccess: () => {
       queryClient.invalidateQueries(['list'])
     }
