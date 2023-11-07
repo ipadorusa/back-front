@@ -22,22 +22,16 @@ const delList = (id) => {
 const useAddList = () => {
   const queryClient = useQueryClient()
   return useMutation(addList, {
-    onSuccess: (data) => {
-      queryClient.setQueryData(['list'], (oldQueryData) => {
+    onSuccess: (data) =>
+      queryClient.setQueryData(['list'], (old) => {
         return {
-          ...oldQueryData.data,
-          data: [...oldQueryData.data, data.data]
+          ...old,
+          data: [...old.data, data.data]
         }
       })
-    }
-  })
-}
-const useDeleteList = (id) => {
-  const queryClient = useQueryClient()
-  return useMutation((idNum = id) => delList(idNum), {
-    onSuccess: () => {
-      queryClient.invalidateQueries(['list'])
-    }
+    // onSuccess: () => {
+    //   queryClient.invalidateQueries(['list'])
+    // }
   })
 }
 

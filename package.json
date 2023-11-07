@@ -13,5 +13,8 @@
   "scripts": {
     "client": "yarn workspace client run dev",
     "server": "yarn workspace server run start"
+  },
+  "dependencies": {
+    "react-iframe": "^1.8.5"
   }
 }

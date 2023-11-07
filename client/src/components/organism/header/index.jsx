@@ -13,6 +13,7 @@ export default function Header() {
       <Link href="/infi">Link - infi</Link>
       <Link href="/counter">Link - counter</Link>
       <Link href="/story">Link - story</Link>
+      <Link href="/test">Link - test</Link>
     </header>
   )
 }
