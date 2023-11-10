@@ -15,7 +15,7 @@ const addList = (item) => {
   return axios.post(`http://localhost:3001/list`, item)
 }
 
-const delList = (id) => {
+const useDeleteList = (id) => {
   return axios.delete(`http://localhost:3001/list/${id}`)
 }
 
